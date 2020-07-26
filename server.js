@@ -2,14 +2,14 @@ var express = require('express');
 var app = express();
 
 app.use(express.static(__dirname + '/public'));
-<<<<<<< HEAD
+
 app.get('/test', function(){
     console.log()
 });
 var port = 3000;
 app.listen(port);
 console.log('Server listening on: '+ port);
-=======
+
 
 var adder = function(num1, num2){
     var result = num1 + num2;
@@ -32,5 +32,3 @@ app.get('/adder', function(req,res){
 var port = 3000;
 app.listen(port);
 console.log('Server listening on: '+ port);
-
->>>>>>> inprogress

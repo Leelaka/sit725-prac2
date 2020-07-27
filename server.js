@@ -8,6 +8,13 @@ var adder = function(num1, num2){
     return result;
 };
 
+let accounts = [
+        {id: 1, name: 'alex', deposit: 5},
+        {id: 2, name: 'sarah', deposit: 5},
+        {id: 3, name: 'jim', deposit: 15}
+    ];
+//var display_results = accounts;
+
 app.get('/test', function(req,res){
     var username = req.query.username;
     console.log("Ye I have been hit " +username);
@@ -21,7 +28,12 @@ app.get('/adder', function(req,res){
     res.send("The result is "+result);
 });
 
+app.get('/acc', function(req,res){
+    console.log(accounts);
+    res.send("Verify the result "+accounts);
+});
+
 var port = 3000;
 app.listen(port);
-console.log('Server listening on: '+ port);
+console.log('Server listening on: '+port);
 

@@ -13,7 +13,7 @@ let accounts = [
         {id: 2, name: 'sarah', deposit: 5},
         {id: 3, name: 'jim', deposit: 15}
     ];
-//var display_results = accounts;
+var display_results = accounts;
 
 app.get('/test', function(req,res){
     var username = req.query.username;
@@ -30,7 +30,7 @@ app.get('/adder', function(req,res){
 
 app.get('/acc', function(req,res){
     console.log(accounts);
-    res.send("Verify the result "+accounts);
+    res.send("Verify the result of the array "+accounts);
 });
 
 var port = 3000;
